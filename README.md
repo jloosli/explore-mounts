@@ -68,7 +68,7 @@ Which it finds at `css/modern-normalize.css`.
 ## Visual results
 
 ### modern-normalize imported correctly
-![modern-normalize successfully imported](images/modern-normalize-imported.png)
+![modern-normalize successfully imported](https://github.com/jloosli/explore-mounts/blob/main/static/images/modern-normalize-imported.png?raw=true)
 
 ### modern-normalize not imported correctly
-![modern-normalize not imported](images/modern-normalize-not-imported.png)
+![modern-normalize not imported](https://github.com/jloosli/explore-mounts/blob/main/static/images/modern-normalize-not-imported.png?raw=true)
