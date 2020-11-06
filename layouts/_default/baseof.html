@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="{{ $.Site.LanguageCode | default " en" }}">
+{{- partial "head.html" . -}}
+
+{{/*  SECTION: Scratch Body Classes
+=======================================================================  */}}
+
+{{ $bodyclass := .Page.Params.bodyclass }}
+
+{{ if $bodyclass }}
+{{ .Scratch.Add "classes" (slice $bodyclass) }}
+{{ end }}
+
+{{ if .IsHome }}
+{{ .Scratch.Add "classes" (slice "home") }}
+{{ end }}
+
+{{ .Scratch.Add "classes" (slice (printf "type-%s" .Type)) }}
+
+{{/*  End: Scratch Body Classes  */}}
+
+<body class="{{ delimit (.Scratch.Get "classes") " " }}">
+{{ block "header" . }}
+{{- partial "header.html" . -}}
+{{ end }}
+{{- block "main" . }}{{- end }}
+{{ block "footer" . }}
+{{- partial "footer.html" . -}}
+{{ end }}
+<!--</div>-->
+{{/*  SECTION: Add Scripts
+=======================================================================  */}}
+
+{{ block "addscripts" . }}
+{{/*  for adding additional scripts based on page template  */}}
+{{ end }}
+
+{{/*  End: Add Scripts  */}}
+
+
+</body>
+</html>
